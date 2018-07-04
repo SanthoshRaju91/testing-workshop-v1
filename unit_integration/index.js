@@ -12,9 +12,11 @@ module.exports = {
         return 'a';
     }
 
-    // Conditions where 'a' wins
-    if ((a === 'rock' && b === 'paper') ||
-        (a === 'paper' && b === 'scissors') ||
+    // Conditions where 'b' wins
+    
+   // /* istanbul ignore else */
+    if ((a === 'rock' && b === 'paper') || 
+        (a === 'paper' && b === 'scissors') || 
         (a === 'scissors' && b === 'rock')) {
         return 'b';
     }
