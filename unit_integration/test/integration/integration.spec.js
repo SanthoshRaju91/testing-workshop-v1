@@ -34,13 +34,19 @@ describe.only('Api Test', function() {
     it('should send post params in request body', function() {
       var params = { foo: 'bar' };
       var expected = JSON.stringify(params);
-
+     
+      var response = new PassThrough();
+      response.write(JSON.stringify(expected));
+      response.end();
+     
       var request = new PassThrough();
       var write = sinon.spy(request, 'write');
 
-      this.request.returns(request);
+      this.request.callsArgWith(1, response).returns(request);
 
-      api.post(params, function() {});
+      api.post(params, function(err, result ) {
+        assert.deepEqual(result, expected);
+      });
 
       assert(write.withArgs(expected).calledOnce);
 		});

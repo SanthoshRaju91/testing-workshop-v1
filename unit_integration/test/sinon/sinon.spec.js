@@ -58,4 +58,15 @@ describe.only('User', function() {
       
     });
   });
+  describe('#greetings with spy', function() {
+    it('should call method once with the argument 3', () => {
+      // create a sinon spy to spy on object.method
+      var spy = sinon.spy(User.prototype, 'greetings')
+      var user = new User(); 
+      // call the method with the argument "3"
+      user.greetings(3)
+      // make sure the object.method was called once, with the right arguments
+      expect(spy.withArgs(3).calledOnce)
+    })
+  });  
 });
