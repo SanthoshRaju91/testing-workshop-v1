@@ -54,5 +54,8 @@ module.exports = {
     
     //Step 4. Return the reversed string
     return joinArray; // "olleh"
+  },
+  multiply: function (num) {
+    return 2 * num;
   }
 }
