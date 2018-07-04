@@ -25,7 +25,6 @@ module.exports = {
 
     req.end();
   },
-
   post: function(data, callback) {
     var req = http.request(
       {
@@ -33,6 +32,7 @@ module.exports = {
         path: '/posts',
         method: 'POST'
       },
+      /* istanbul ignore next  */
       function(response) {
         var data = '';
         response.on('data', function(chunk) {
