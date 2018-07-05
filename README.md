@@ -24,6 +24,6 @@ For running the e2e tests, run the below command
 
 `npm run e2e:open` / `yarn e2e:open`
 
-For reunning the unit_integration tests, run the below command.
+For running the unit_integration tests, run the below command.
 
 `npm run test` / `yarn test`
