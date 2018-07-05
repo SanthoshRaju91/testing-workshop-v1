@@ -1,6 +1,6 @@
 # Testing Workshop
 
-prerequisties 
+Prerequisties 
 
 1. Node installed on your machine.
 2. Project clone on your machine.
@@ -18,3 +18,12 @@ Then install these two packages globally.
 `npm install -g cypress`
 
 `npm install -g mocha`
+
+
+For running the e2e tests, run the below command
+
+`npm run e2e:open` / `yarn e2e:open`
+
+For reunning the unit_integration tests, run the below command.
+
+`npm run test` / `yarn test`
